@@ -59,11 +59,11 @@ h6 {
 /* CSS Variables */
 
 :root {
-  --orange: hsl(25, 97%, 53%);
-  --white: hsl(0, 0%, 100%);
-  --light-grey: hsl(217, 12%, 63%);
-  --dark-blue: hsl(213, 19%, 18%);
-  --very-dark-blue: hsl(216, 12%, 8%);
+  --orange: rgb(251, 116, 19);
+  --white: rgb(255, 255, 255);
+  --light-grey: rgb(149, 158, 172);
+  --dark-blue: rgb(37, 45, 55);
+  --very-dark-blue: rgb(18, 20, 23);
 }
 
 body {
@@ -90,34 +90,52 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--dark-blue);
+  background: rgb(37, 45, 55, 0.8);
   padding: 2rem;
   border-radius: 25px;
-  height: 400px;
-  width: 400px;
-  opacity: 0.8;
+  height: 425px;
+  width: 425px;
 }
 
 .icon-container {
   width: fit-content;
+  background: rgb(149, 158, 172, 0.1);
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 2rem;
 }
 
 .star-icon {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
 }
 
 .heading {
   color: var(--white);
   font-size: 1.75rem;
+  margin-bottom: 1rem;
 }
 
 .intro-text {
   font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.ratings {
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 .rating {
   color: var(--light-grey);
+  background: rgb(149, 158, 172, 0.1);
+  border-radius: 50%;
+  padding: 25px;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit-btn {
@@ -129,6 +147,7 @@ p {
   padding: 12px;
   font-weight: 700;
   cursor: pointer;
+  letter-spacing: 2px;
 }
 
 .attribution {
