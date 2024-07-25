@@ -55,13 +55,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/*
-    8. Create a root stacking context
-  */
-#root,
-#__next {
-  isolation: isolate;
-}
 
 /* CSS Variables */
 
@@ -77,15 +70,71 @@ body {
   font-family: "Overpass", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--very-dark-blue);
 }
 
 p {
   font-size: 15px;
+  color: var(--light-grey);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  padding: 2rem;
+  border-radius: 25px;
+  height: 400px;
+  width: 400px;
+  opacity: 0.8;
+}
+
+.icon-container {
+  width: fit-content;
+}
+
+.star-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.heading {
+  color: var(--white);
+  font-size: 1.75rem;
+}
+
+.intro-text {
+  font-weight: 600;
+}
+
+.rating {
+  color: var(--light-grey);
+}
+
+.submit-btn {
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--light-grey);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
