@@ -63,7 +63,7 @@ h6 {
   --white: rgb(255, 255, 255);
   --light-grey: rgb(149, 158, 172);
   --dark-blue: rgb(37, 45, 55);
-  --very-dark-blue: rgb(18, 20, 23);
+  --very-dark-blue: #121417;
 }
 
 body {
@@ -71,11 +71,6 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   background-color: var(--very-dark-blue);
-}
-
-p {
-  font-size: 15px;
-  color: var(--light-grey);
 }
 
 .wrapper {
@@ -117,6 +112,8 @@ p {
 }
 
 .intro-text {
+  font-size: 15px;
+  color: var(--light-grey);
   font-weight: 600;
   margin-bottom: 2rem;
 }
@@ -128,10 +125,15 @@ p {
   justify-content: space-between;
 }
 
-.rating {
+/* Hide the default radio button */
+.radio {
+  display: none;
+}
+
+.label {
   color: var(--light-grey);
   font-weight: 700;
-  background: rgb(149, 158, 172, 0.1);
+  background: rgba(149, 158, 172, 0.1);
   border-radius: 50%;
   padding: 25px;
   height: 15px;
@@ -142,9 +144,18 @@ p {
   transition: 0.3s ease-in-out;
 }
 
-.rating:hover {
+.label:hover {
   cursor: pointer;
   background: var(--orange);
+  color: var(--very-dark-blue);
+}
+
+#rating-1:checked ~ .label-1,
+#rating-2:checked ~ .label-2,
+#rating-3:checked ~ .label-3,
+#rating-4:checked ~ .label-4,
+#rating-5:checked ~ .label-5 {
+  background-color: var(--white);
   color: var(--very-dark-blue);
 }
 
