@@ -89,7 +89,7 @@ body {
   padding: 2rem;
   border-radius: 30px;
   height: 425px;
-  width: 425px;
+  width: 400px;
 }
 
 .icon-container {
@@ -185,4 +185,47 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Thankyou Styles */
+
+.thankyou-container {
+  gap: 25px;
+}
+
+.thankyou-img {
+  align-self: center;
+}
+
+.thankyou-heading {
+  color: var(--white);
+  font-size: 1.75rem;
+}
+
+.rating-confirmation {
+  color: var(--orange);
+  background-color: var(--dark-blue);
+  width: fit-content;
+  align-self: center;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.thankyou-para {
+  color: var(--light-grey);
+  font-size: 15px;
+}
+
+.thankyou-heading,
+.rating-confirmation,
+.thankyou-para {
+  text-align: center;
+}
+
+/* CSS for smartphones */
+@media (max-width: 767px) {
+  .container {
+    height: 400px;
+    width: 375px;
+  }
 }
