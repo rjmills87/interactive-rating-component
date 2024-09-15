@@ -68,21 +68,24 @@
             id="rating-5"
           /><label class="label label-5" for="rating-5">5</label>
         </form>
-        <button type="submit" class="submit-btn" id="submit" form="ratings">
+        <button type="button" class="submit-btn" id="submit" form="ratings">
           Submit
         </button>
       </div>
       <!-- Rating state end -->
+
       <!-- Thank you state start -->
-      <!-- <div class="container thankyou-container" id="thankyou-content">
+      <div class="container thankyou-container" id="thankyou-content">
         <img class="thankyou-img" src="/images/illustration-thank-you.svg" />
-        <span class="rating-confirmation">You selected 4 out of 5</span>
+        <span class="rating-confirmation"
+          >You selected <span id="chosen-rating"></span> out of 5</span
+        >
         <h2 class="thankyou-heading">Thank you!</h2>
         <p class="thankyou-para">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
         </p>
-      </div> -->
+      </div>
       <!-- Thank you state end -->
     </div>
     <div class="attribution">

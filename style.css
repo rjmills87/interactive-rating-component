@@ -189,6 +189,10 @@ body {
 
 /* Thankyou Styles */
 
+#thankyou-content {
+  display: none;
+}
+
 .thankyou-container {
   gap: 25px;
 }
