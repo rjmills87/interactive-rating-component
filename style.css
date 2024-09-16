@@ -235,11 +235,3 @@ legend {
 .thankyou-para {
   text-align: center;
 }
-
-/* CSS for smartphones */
-@media (max-width: 767px) {
-  .container {
-    height: 400px;
-    width: 375px;
-  }
-}
