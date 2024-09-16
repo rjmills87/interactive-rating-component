@@ -29,8 +29,6 @@ This is my solution to Frontend Mentors Interactive Rating Component Challenge. 
 - Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-css-javascript-vCK__V2OnLhttps://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://clever-arithmetic-5b009a.netlify.app/)
 
-## My process
-
 ### Built with
 
 - HTML5
