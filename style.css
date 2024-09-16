@@ -118,11 +118,21 @@ body {
   margin-bottom: 2rem;
 }
 
-.ratings {
+/* Ratings Form Styles */
+
+.ratings > fieldset {
   display: flex;
   flex: 1;
   margin-bottom: 2rem;
   justify-content: space-between;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  display: none;
 }
 
 /* Hide the default radio button */
