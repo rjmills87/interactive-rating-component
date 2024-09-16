@@ -22,11 +22,9 @@ This is my solution to Frontend Mentors Interactive Rating Component Challenge. 
 
 ![](./screenshot.png)
 
-![](./screenshot-thankyou.jpg)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-css-javascript-vCK__V2OnLhttps://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-css-javascript-vCK__V2OnL)
 - Live Site URL: [Add live site URL here](https://clever-arithmetic-5b009a.netlify.app/)
 
 ### Built with
