@@ -1,7 +1,7 @@
 const ratingContent = document.getElementById("rating-content");
 const thankyouContent = document.getElementById("thankyou-content");
 const chosenRating = document.getElementById("chosen-rating");
-const submit = document.querySelector(".submit-btn");
+const form = document.getElementById("ratings");
 
 // Get the selected value from rating form
 const getRatingValue = () => {
@@ -14,13 +14,9 @@ const getRatingValue = () => {
 };
 
 // Form Submission
-submit.addEventListener("click", function () {
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
   getRatingValue();
   ratingContent.style.display = "none";
   thankyouContent.style.display = "flex";
-
-  // Prevent page refresh on form submission
-  document.getElementById("ratings").addEventListener("submit", function (e) {
-    e.preventDefault();
-  });
 });
