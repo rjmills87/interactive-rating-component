@@ -112,7 +112,7 @@ body {
 }
 
 .intro-text {
-  font-size: 15px;
+  font-size: 0.9rem;
   color: var(--light-grey);
   font-weight: 600;
   margin-bottom: 2rem;
@@ -188,7 +188,7 @@ legend {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.7rem;
   text-align: center;
   color: var(--light-grey);
 }
@@ -227,7 +227,7 @@ legend {
 
 .thankyou-para {
   color: var(--light-grey);
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 .thankyou-heading,
