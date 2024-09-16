@@ -119,8 +119,6 @@ body {
 
 /* Ratings Form Styles */
 
-/* Ratings Form Styles */
-
 .ratings > fieldset {
   display: flex;
   justify-content: space-between;
@@ -136,10 +134,16 @@ legend {
   display: none;
 }
 
-/* Hide the default radio button */
-.radio {
+/* Hide the default radio buttons while keeping accessible */
+.visually-hidden {
   position: absolute;
-  opacity: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Default Label Styles */
