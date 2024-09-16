@@ -119,11 +119,12 @@ body {
 
 /* Ratings Form Styles */
 
+/* Ratings Form Styles */
+
 .ratings > fieldset {
   display: flex;
-  flex: 1;
-  margin-bottom: 2rem;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 fieldset {
@@ -137,9 +138,11 @@ legend {
 
 /* Hide the default radio button */
 .radio {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
+/* Default Label Styles */
 .label {
   color: var(--light-grey);
   font-weight: 700;
@@ -160,13 +163,24 @@ legend {
   color: var(--very-dark-blue);
 }
 
-#rating-1:checked ~ .label-1,
-#rating-2:checked ~ .label-2,
-#rating-3:checked ~ .label-3,
-#rating-4:checked ~ .label-4,
-#rating-5:checked ~ .label-5 {
+/* Checked state for labels */
+.radio-1:checked + .label-1,
+.radio-2:checked + .label-2,
+.radio-3:checked + .label-3,
+.radio-4:checked + .label-4,
+.radio-5:checked + .label-5 {
   background-color: var(--white);
   color: var(--very-dark-blue);
+}
+
+/* Focus-visible style for keyboard navigation */
+.radio-1:focus-visible + .label-1,
+.radio-2:focus-visible + .label-2,
+.radio-3:focus-visible + .label-3,
+.radio-4:focus-visible + .label-4,
+.radio-5:focus-visible + .label-5 {
+  outline: 4px solid var(--white);
+  background-color: var(--orange);
 }
 
 .submit-btn {
@@ -187,19 +201,9 @@ legend {
   color: var(--very-dark-blue);
 }
 
-.attribution {
-  font-size: 0.7rem;
-  text-align: center;
-  color: var(--light-grey);
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 /* Thankyou Styles */
 
-#thankyou-content {
+.thankyou-container {
   display: none;
 }
 
@@ -234,4 +238,14 @@ legend {
 .rating-confirmation,
 .thankyou-para {
   text-align: center;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--light-grey);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
