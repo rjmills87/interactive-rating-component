@@ -88,8 +88,7 @@ body {
   background: rgb(37, 45, 55, 0.8);
   padding: 2rem;
   border-radius: 30px;
-  height: 425px;
-  width: 400px;
+  max-width: 23.5rem;
 }
 
 .icon-container {
@@ -129,6 +128,7 @@ body {
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 legend {
