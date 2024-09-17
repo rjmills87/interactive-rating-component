@@ -5,10 +5,10 @@ const form = document.getElementById("ratings");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const selectedRating = form.rating.value;
+  const ratingValue = form.rating.value;
 
-  if (selectedRating) {
-    chosenRating.innerText = selectedRating;
+  if (ratingValue) {
+    chosenRating.innerText = ratingValue;
 
     ratingContent.classList.add("hidden");
     thankyouContent.classList.remove("hidden");
