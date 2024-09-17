@@ -81,8 +81,15 @@ body {
   height: 100vh;
 }
 
-.container {
+.hidden {
+  display: none;
+}
+
+.flex-display {
   display: flex;
+}
+
+.container {
   flex-direction: column;
   justify-content: center;
   background: rgb(37, 45, 55, 0.8);
@@ -197,6 +204,7 @@ legend {
   font-weight: 700;
   letter-spacing: 2px;
   transition: 0.3s ease-in-out;
+  width: 100%;
 }
 
 .submit-btn:hover {
@@ -206,10 +214,6 @@ legend {
 }
 
 /* Thankyou Styles */
-
-.thankyou-container {
-  display: none;
-}
 
 .thankyou-container {
   gap: 25px;
