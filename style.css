@@ -263,13 +263,7 @@ h1 {
 }
 
 /* Ratings Form Styles */
-#ratings fieldset {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-#ratings label {
+.ratings label {
   color: var(--light-grey);
   font-weight: 700;
   background: rgba(149, 158, 172, 0.1);
@@ -283,24 +277,24 @@ h1 {
   transition: 0.3s ease-in-out;
 }
 
-#ratings label:hover {
+.ratings label:hover {
   cursor: pointer;
   background: var(--orange);
   color: var(--very-dark-blue);
 }
 
-#ratings input:checked + label {
+.ratings input:checked + label {
   background-color: var(--white);
   color: var(--very-dark-blue);
 }
 
-#ratings input:focus-visible + label {
+.ratings input:focus-visible + label {
   outline: 4px solid var(--white);
   background-color: var(--orange);
 }
 
 /* Update submit button selector */
-#submit {
+.submit-btn {
   background-color: var(--orange);
   color: var(--very-dark-blue);
   text-transform: uppercase;
@@ -313,33 +307,33 @@ h1 {
   width: 100%;
 }
 
-#submit:hover {
+.submit-btn:hover {
   cursor: pointer;
   background-color: var(--white);
   color: var(--very-dark-blue);
 }
 
 /* Thankyou Styles */
-#thankyou-content {
+.thankyou-container {
   gap: 25px;
 }
 
-#thankyou-content img {
+.thankyou-container img {
   align-self: center;
 }
 
-#thankyou-content h2 {
+.thankyou-container h2 {
   color: var(--white);
   font-size: 1.75rem;
 }
 
-#thankyou-content p {
+.thankyou-container p {
   color: var(--light-grey);
   font-size: 0.9rem;
 }
 
-#thankyou-content h2,
+.thankyou-container h2,
 .rating-confirmation,
-#thankyou-content p {
+.thankyou-container p {
   text-align: center;
 }
