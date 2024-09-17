@@ -126,7 +126,7 @@ body {
 
 /* Ratings Form Styles */
 
-.ratings > fieldset {
+.ratings fieldset {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -175,21 +175,13 @@ legend {
 }
 
 /* Checked state for labels */
-.radio-1:checked + .label-1,
-.radio-2:checked + .label-2,
-.radio-3:checked + .label-3,
-.radio-4:checked + .label-4,
-.radio-5:checked + .label-5 {
+.radio:checked + .label {
   background-color: var(--white);
   color: var(--very-dark-blue);
 }
 
 /* Focus-visible style for keyboard navigation */
-.radio-1:focus-visible + .label-1,
-.radio-2:focus-visible + .label-2,
-.radio-3:focus-visible + .label-3,
-.radio-4:focus-visible + .label-4,
-.radio-5:focus-visible + .label-5 {
+.radio:focus-visible + .label {
   outline: 4px solid var(--white);
   background-color: var(--orange);
 }
@@ -219,11 +211,11 @@ legend {
   gap: 25px;
 }
 
-.thankyou-img {
+.thankyou-container img {
   align-self: center;
 }
 
-.thankyou-heading {
+.thankyou-container h2 {
   color: var(--white);
   font-size: 1.75rem;
 }
@@ -237,14 +229,14 @@ legend {
   border-radius: 25px;
 }
 
-.thankyou-para {
+.thankyou-container p {
   color: var(--light-grey);
   font-size: 0.9rem;
 }
 
-.thankyou-heading,
+.thankyou-container h2,
 .rating-confirmation,
-.thankyou-para {
+.thankyou-container p {
   text-align: center;
 }
 
@@ -256,4 +248,101 @@ legend {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Remove .heading class and target h1 directly */
+h1 {
+  color: var(--white);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Remove .intro-text class and target p directly within .container */
+.container > p {
+  font-size: 0.9rem;
+  color: var(--light-grey);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Ratings Form Styles */
+#ratings fieldset {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+#ratings label {
+  color: var(--light-grey);
+  font-weight: 700;
+  background: rgba(149, 158, 172, 0.1);
+  border-radius: 50%;
+  padding: 25px;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+#ratings label:hover {
+  cursor: pointer;
+  background: var(--orange);
+  color: var(--very-dark-blue);
+}
+
+#ratings input:checked + label {
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+
+#ratings input:focus-visible + label {
+  outline: 4px solid var(--white);
+  background-color: var(--orange);
+}
+
+/* Update submit button selector */
+#submit {
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+
+/* Thankyou Styles */
+#thankyou-content {
+  gap: 25px;
+}
+
+#thankyou-content img {
+  align-self: center;
+}
+
+#thankyou-content h2 {
+  color: var(--white);
+  font-size: 1.75rem;
+}
+
+#thankyou-content p {
+  color: var(--light-grey);
+  font-size: 0.9rem;
+}
+
+#thankyou-content h2,
+.rating-confirmation,
+#thankyou-content p {
+  text-align: center;
 }

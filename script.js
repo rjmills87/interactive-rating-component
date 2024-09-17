@@ -1,7 +1,7 @@
-const ratingContent = document.getElementById("rating-content");
-const thankyouContent = document.getElementById("thankyou-content");
-const chosenRating = document.getElementById("chosen-rating");
-const form = document.getElementById("ratings");
+const ratingContainer = document.querySelector(".rating-container");
+const thankyouContainer = document.querySelector(".thankyou-container");
+const chosenRating = document.querySelector(".rating-confirmation span");
+const form = document.querySelector(".ratings");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -10,9 +10,9 @@ form.addEventListener("submit", function (e) {
   if (ratingValue) {
     chosenRating.innerText = ratingValue;
 
-    ratingContent.classList.add("hidden");
-    thankyouContent.classList.remove("hidden");
-    thankyouContent.classList.add("flex-display");
+    ratingContainer.classList.add("hidden");
+    thankyouContainer.classList.remove("hidden");
+    thankyouContainer.classList.add("flex-display");
   } else {
     alert("Please choose a rating before you submit.");
   }
