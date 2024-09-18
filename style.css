@@ -1,31 +1,28 @@
 /* Modern CSS Reset by Josh Como https://www.joshwcomeau.com/css/custom-css-reset/ */
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* 1. Use a more-intuitive box-sizing model. */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/*
-    2. Remove default margin
-  */
+
+/* 2. Remove default margin */
 * {
   margin: 0;
 }
-/*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
+
+/* 3. Add accessible line-height and 4. Improve text rendering */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--very-dark-blue);
 }
-/*
-    5. Improve media defaults
-  */
+
+/* 5. Improve media defaults */
 img,
 picture,
 video,
@@ -34,18 +31,16 @@ svg {
   display: block;
   max-width: 100%;
 }
-/*
-    6. Remove built-in form typography styles
-  */
+
+/* 6. Remove built-in form typography styles */
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-/*
-    7. Avoid text overflows
-  */
+
+/* 7. Avoid text overflows */
 p,
 h1,
 h2,
@@ -57,20 +52,12 @@ h6 {
 }
 
 /* CSS Variables */
-
 :root {
   --orange: rgb(251, 116, 19);
   --white: rgb(255, 255, 255);
   --light-grey: rgb(149, 158, 172);
   --dark-blue: rgb(37, 45, 55);
   --very-dark-blue: #121417;
-}
-
-body {
-  font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  background-color: var(--very-dark-blue);
 }
 
 .wrapper {
@@ -111,13 +98,15 @@ body {
   width: 15px;
 }
 
-.heading {
+/* Remove .heading class and target h1 directly */
+h1 {
   color: var(--white);
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
-.intro-text {
+/* Remove .intro-text class and target p directly within .container */
+.container > p {
   font-size: 0.9rem;
   color: var(--light-grey);
   font-weight: 600;
@@ -125,7 +114,6 @@ body {
 }
 
 /* Ratings Form Styles */
-
 .ratings fieldset {
   display: flex;
   justify-content: space-between;
@@ -151,7 +139,8 @@ fieldset {
 }
 
 /* Default Label Styles */
-.label {
+.label,
+.ratings label {
   color: var(--light-grey);
   font-weight: 700;
   background: rgba(149, 158, 172, 0.1);
@@ -165,24 +154,28 @@ fieldset {
   transition: 0.3s ease-in-out;
 }
 
-.label:hover {
+.label:hover,
+.ratings label:hover {
   cursor: pointer;
   background: var(--orange);
   color: var(--very-dark-blue);
 }
 
 /* Checked state for labels */
-.radio:checked + .label {
+.radio:checked + .label,
+.ratings input:checked + label {
   background-color: var(--white);
   color: var(--very-dark-blue);
 }
 
 /* Focus-visible style for keyboard navigation */
-.radio:focus-visible + .label {
+.radio:focus-visible + .label,
+.ratings input:focus-visible + label {
   outline: 4px solid var(--white);
   background-color: var(--orange);
 }
 
+/* Submit button */
 .submit-btn {
   background-color: var(--orange);
   color: var(--very-dark-blue);
@@ -203,9 +196,8 @@ fieldset {
 }
 
 /* Thankyou Styles */
-
 .thankyou-container {
-  gap: 25px;
+  gap: 15px;
 }
 
 .thankyou-container img {
@@ -237,6 +229,7 @@ fieldset {
   text-align: center;
 }
 
+/* Attribution */
 .attribution {
   font-size: 0.7rem;
   text-align: center;
@@ -245,95 +238,4 @@ fieldset {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-/* Remove .heading class and target h1 directly */
-h1 {
-  color: var(--white);
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-
-/* Remove .intro-text class and target p directly within .container */
-.container > p {
-  font-size: 0.9rem;
-  color: var(--light-grey);
-  font-weight: 600;
-  margin-bottom: 2rem;
-}
-
-/* Ratings Form Styles */
-.ratings label {
-  color: var(--light-grey);
-  font-weight: 700;
-  background: rgba(149, 158, 172, 0.1);
-  border-radius: 50%;
-  padding: 25px;
-  height: 15px;
-  width: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s ease-in-out;
-}
-
-.ratings label:hover {
-  cursor: pointer;
-  background: var(--orange);
-  color: var(--very-dark-blue);
-}
-
-.ratings input:checked + label {
-  background-color: var(--white);
-  color: var(--very-dark-blue);
-}
-
-.ratings input:focus-visible + label {
-  outline: 4px solid var(--white);
-  background-color: var(--orange);
-}
-
-/* Update submit button selector */
-.submit-btn {
-  background-color: var(--orange);
-  color: var(--very-dark-blue);
-  text-transform: uppercase;
-  border: 0;
-  border-radius: 25px;
-  padding: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  transition: 0.3s ease-in-out;
-  width: 100%;
-}
-
-.submit-btn:hover {
-  cursor: pointer;
-  background-color: var(--white);
-  color: var(--very-dark-blue);
-}
-
-/* Thankyou Styles */
-.thankyou-container {
-  gap: 25px;
-}
-
-.thankyou-container img {
-  align-self: center;
-}
-
-.thankyou-container h2 {
-  color: var(--white);
-  font-size: 1.75rem;
-}
-
-.thankyou-container p {
-  color: var(--light-grey);
-  font-size: 0.9rem;
-}
-
-.thankyou-container h2,
-.rating-confirmation,
-.thankyou-container p {
-  text-align: center;
 }
