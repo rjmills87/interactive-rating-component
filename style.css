@@ -98,14 +98,12 @@ h6 {
   width: 15px;
 }
 
-/* Remove .heading class and target h1 directly */
 h1 {
   color: var(--white);
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
-/* Remove .intro-text class and target p directly within .container */
 .container > p {
   font-size: 0.9rem;
   color: var(--light-grey);
