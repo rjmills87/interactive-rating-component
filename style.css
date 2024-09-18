@@ -171,7 +171,8 @@ fieldset {
 /* Focus-visible style for keyboard navigation */
 .radio:focus-visible + .label,
 .ratings input:focus-visible + label {
-  outline: 4px solid var(--white);
+  outline: 2px solid var(--white);
+  color: var(--white);
   background-color: var(--orange);
 }
 
